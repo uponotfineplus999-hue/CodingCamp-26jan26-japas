@@ -1,0 +1,204 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+/*logo*/
+.logo-img {
+    height: 50px;
+    width: auto
+    display: block;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+ 
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Profile Section */
+.profile-section {
+    padding: 40px 50px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* HQ Section */
+.hq-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.hq-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.hq-item {
+    text-align: center;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Membuat lingkaran */
+    margin: 0 auto 10px;
+}
+
+/* Message Section */
+.message-section {
+    padding: 50px;
+    background-color: white;
+}
+
+.form-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* Kotak Output (Kanan) */
+.output-box {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    height: fit-content;
+    min-height: 200px;
+}
+/* --- RESPONSIVE DESIGN (Sesuai Poin 6 Workflow) --- */
+
+/* Aturan CSS ini hanya berlaku jika lebar layar di bawah 768px (Tablet/HP) */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Navbar menjadi vertikal atau lebih kecil */
+    nav {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Menu jadi atas-bawah */
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    /* 2. Hero text lebih kecil agar muat */
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    /* 3. Headquarters (Lingkaran) jadi tumpuk ke bawah */
+    .hq-container {
+        flex-direction: column; /* Mengubah baris jadi kolom */
+        gap: 30px;
+    }
+
+    /* 4. Form Section (Kiri Form, Kanan Result) jadi Atas-Bawah */
+    .form-container {
+        flex-direction: column;
+    }
+
+    .output-box {
+        margin-top: 20px;
+        min-height: 150px;
+    }
+    
+    /* Tombol submit penuh lebar */
+    button {
+        width: 100%;
+    }
+}
+/* Tambahan untuk Gender */
+.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antar pilihan */
+    margin-top: 5px;
+}
+
+/* Supaya titik radio button dan tulisannya sejajar */
+.gender-container input {
+    margin-top: 0; /* Reset margin bawaan */
+    margin-right: 5px; /* Jarak kecil antara titik dan teks */
+    width: auto; /* Biarkan ukurannya normal */
+}
+
+.radio-label {
+    font-weight: normal; /* Tulisan pilihan tidak perlu tebal */
+    cursor: pointer;
+}
